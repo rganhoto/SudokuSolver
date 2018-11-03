@@ -28,44 +28,44 @@ namespace SudokuSolver
 
             btnSolve.Click += BtnSolve_Click;
 
-            a1.SetText(0, 0, 5);
-            a1.SetText(1, 0, 3);
-            a1.SetText(0, 1, 6);
-            a1.SetText(1, 2, 9);
-            a1.SetText(2, 2, 8);
+            //a1.SetText(0, 0, 5);
+            //a1.SetText(1, 0, 3);
+            //a1.SetText(0, 1, 6);
+            //a1.SetText(1, 2, 9);
+            //a1.SetText(2, 2, 8);
 
-            a2.SetText(1, 0, 7);
-            a2.SetText(0, 1, 1);
-            a2.SetText(1, 1, 9);
-            a2.SetText(2, 1, 5);
+            //a2.SetText(1, 0, 7);
+            //a2.SetText(0, 1, 1);
+            //a2.SetText(1, 1, 9);
+            //a2.SetText(2, 1, 5);
 
-            a3.SetText(1, 2, 6);
+            //a3.SetText(1, 2, 6);
 
-            a4.SetText(0, 0, 8);
-            a4.SetText(0, 1, 4);
-            a4.SetText(0, 2, 7);
+            //a4.SetText(0, 0, 8);
+            //a4.SetText(0, 1, 4);
+            //a4.SetText(0, 2, 7);
 
-            a5.SetText(1, 0, 6);
-            a5.SetText(0, 1, 8);
-            a5.SetText(2, 1, 3);
-            a5.SetText(1, 2, 2);
+            //a5.SetText(1, 0, 6);
+            //a5.SetText(0, 1, 8);
+            //a5.SetText(2, 1, 3);
+            //a5.SetText(1, 2, 2);
 
-            a6.SetText(2, 0, 3);
-            a6.SetText(2, 1, 1);
-            a6.SetText(2, 2, 6);
+            //a6.SetText(2, 0, 3);
+            //a6.SetText(2, 1, 1);
+            //a6.SetText(2, 2, 6);
 
-            a7.SetText(1, 0, 6);
+            //a7.SetText(1, 0, 6);
 
-            a8.SetText(0, 1, 4);
-            a8.SetText(1, 1, 1);
-            a8.SetText(2, 1, 9);
-            a8.SetText(1, 2, 8);
+            //a8.SetText(0, 1, 4);
+            //a8.SetText(1, 1, 1);
+            //a8.SetText(2, 1, 9);
+            //a8.SetText(1, 2, 8);
 
-            a9.SetText(0, 0, 2);
-            a9.SetText(1, 0, 8);
-            a9.SetText(2, 1, 5);
-            a9.SetText(1, 2, 7);
-            a9.SetText(2, 2, 9);
+            //a9.SetText(0, 0, 2);
+            //a9.SetText(1, 0, 8);
+            //a9.SetText(2, 1, 5);
+            //a9.SetText(1, 2, 7);
+            //a9.SetText(2, 2, 9);
 
         }
 

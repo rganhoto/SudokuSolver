@@ -12,6 +12,7 @@ namespace SudokuSolver.Core
 
         bool[,] editabledData = new bool[9, 9];
         int[,] xxxcurrentMatrix = new int[9, 9];
+        bool _foundSolution = false;
 
         List<int> avialableValues = new List<int>();
 
@@ -111,32 +112,33 @@ namespace SudokuSolver.Core
             return false;
 
         }
-
+        
         private bool FindCell(int[,] matrix, int Current)
         {
             int x = Current % 9;
             int y = Current / 9;
-            bool _foundSolution = false;
 
             int[,] outputmatrix = matrix.Clone() as int[,];
             if (editabledData[x, y])
             {
                 //TEST CELL
-                Parallel.ForEach(avialableValues, i =>
+                Parallel.ForEach(avialableValues, (i, state) =>
                 //for (int i = 1; i <= 9; i++)
                 {
 
                     if (_foundSolution)
+                    {
+                        state.Break();
                         return;
-
+                    }
                     //CLONE?
                     int[,] clonematrix = outputmatrix.Clone() as int[,];
                     clonematrix[x, y] = i;
                     //CleanUp(ref clonematrix, Current + 1);
 
 
-                    if (Current == 2)
-                        PrintCurrentMatrix(outputmatrix);
+                    //if (Current == 2)
+                    //    PrintCurrentMatrix(outputmatrix);
 
                     if (!VerifyLine(ref clonematrix, x, false))
                         return;
@@ -153,6 +155,7 @@ namespace SudokuSolver.Core
                             outputmatrix = clonematrix;
                             xxxcurrentMatrix = outputmatrix;
                             _foundSolution = true;
+                            state.Break();
                             return;
                         }
                         return;
@@ -225,23 +228,23 @@ namespace SudokuSolver.Core
         }
 
 
-        private void PrintCurrentMatrix(int[,] matrix)
-        {
+        //private void PrintCurrentMatrix(int[,] matrix)
+        //{
 
-            Debug.WriteLine("--------------------------------------------");
-            Debug.WriteLine("--------------------------------------------");
-            Debug.WriteLine("--------------------------------------------");
-            for (int y = 0; y < 9; y++)
-            {
-                for (int x = 0; x < 9; x++)
-                {
-                    Debug.Write(matrix[x, y] + " ");
-                }
-                Debug.WriteLine("");
+        //    Debug.WriteLine("--------------------------------------------");
+        //    Debug.WriteLine("--------------------------------------------");
+        //    Debug.WriteLine("--------------------------------------------");
+        //    for (int y = 0; y < 9; y++)
+        //    {
+        //        for (int x = 0; x < 9; x++)
+        //        {
+        //            Debug.Write(matrix[x, y] + " ");
+        //        }
+        //        Debug.WriteLine("");
 
-            }
+        //    }
 
-        }
+        //}
 
     }
 }
