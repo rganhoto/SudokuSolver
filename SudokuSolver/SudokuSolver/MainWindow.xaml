@@ -1,0 +1,32 @@
+﻿<Window x:Class="SudokuSolver.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SudokuSolver"
+        xmlns:controls="clr-namespace:SudokuSolver.Controls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Viewbox >
+            <Border BorderThickness="4" BorderBrush="Black" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <UniformGrid Columns="3" Rows="3">
+                    <controls:ucArea x:Name="a1"/>
+                    <controls:ucArea x:Name="a2"/>
+                    <controls:ucArea x:Name="a3"/>
+                    <controls:ucArea x:Name="a4"/>
+                    <controls:ucArea x:Name="a5"/>
+                    <controls:ucArea x:Name="a6"/>
+                    <controls:ucArea x:Name="a7"/>
+                    <controls:ucArea x:Name="a8"/>
+                    <controls:ucArea x:Name="a9"/>
+                </UniformGrid>
+            </Border>
+        </Viewbox>
+        <Button Grid.Row="1" Content="Solve" Name="btnSolve" />
+    </Grid>
+</Window>
